@@ -1,6 +1,6 @@
 [package]
 name = "flute"
-version = "1.1.4"
+version = "0.0.1"
 authors = ["Tommy Liu"]
 edition = "2021"
 license = "MIT"
@@ -9,16 +9,16 @@ reference = "https://github.com/ypo/flute"
 repository = "https://github.com/ypo/flute"
 keywords = ["multicast", "network", "broadcast", "5g", "satellite"]
 categories = ["network-programming", "encoding", "aerospace::space-protocols"]
-rust-version = "1.66"
+rust-version = "1.75.0"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-[lib]
-name = "flute"
-crate-type = ["cdylib", "rlib"]
-path = "src/lib.rs"
+# # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# [lib]
+# name = "flute"
+# crate-type = ["cdylib", "rlib"]
+# path = "src/lib.rs"
 
 [dependencies]
-log  = "0.4"
+log = "0.4"
 chrono = "0.4.23"
 serde = { version = "1.0", features = ["derive"] }
 quick-xml = { version = "0.31.0", features = ["serialize"] }
@@ -32,11 +32,12 @@ pyo3 = { version = "0.20", features = ["extension-module"], optional = true }
 pyo3-log = { version = "0.9", optional = true }
 raptorq = "1.7"
 raptor-code = "1.0.5"
-opentelemetry = { version = "0.20", optional = true  }
+opentelemetry = { version = "0.21", optional = true }
 rand = "0.8"
+flute = "1.1.4"
 
 [dev-dependencies]
-env_logger = "0.10.0"
+env_logger = "0.11.1"
 tempfile = "3.8.0"
 
 [features]
